@@ -3,24 +3,20 @@
     "name": "mechanix-app",
     "slug": "mechanix-app",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "orientation": "portrait"
+  },
+  "updates": {
+    "fallbackToCacheTimeout": 0
+  },
+  "assetBundlePatterns": [
+    "**/*"
+  ],
+  "ios": {
+    "bundleIdentifier": "com.ees.mechanix",
+    "buildNumber": "1.0.0"
+  },
+  "android": {
+    "package": "com.ees.mechanix",
+    "versionCode": 1
   }
 }
