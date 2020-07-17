@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { Cabecalho } from '../../Components/Cabecalho';
 import { Foto } from '../../Components/Foto';
-import {Comentarios} from '../../Components/Comentarios'
+import { Comentarios } from '../../Components/Comentarios'
 import lerFotos from '../../api/feed';
 import { curtirFoto, imgLike } from '../../api/curtidas';
 import adicionarComentario from '../../api/comentario';
@@ -22,7 +22,7 @@ const Feed = () => {
   let altura = 0;
 
   return (
-    <ScrollView style={{marginTop:altura}}>
+    <ScrollView style={{ marginTop: altura }}>
       <StatusBar
         backgroundColor="white"
         barStyle="dark-content"
@@ -42,9 +42,9 @@ const Feed = () => {
               imgLike={imgLike}
               curtirFoto={curtirFoto}
             />
-            <Comentarios 
-            comentarios={item.comentarios}
-            adicionarComentario={adicionarComentario}/>
+            <Comentarios
+              comentarios={item.comentarios}
+              adicionarComentario={adicionarComentario} />
           </Fragment>}
       />
     </ScrollView>
@@ -56,10 +56,7 @@ Feed.navigationOptions = ({ navigation }) => {
   const opcoes = {
     title: navigation.getParam("nome")
   }
-  if(Platform.OS == "android"){
-    opcoes.header = null;
-  }
-  
+  opcoes.headerShown = false;
 
   return opcoes;
 }
